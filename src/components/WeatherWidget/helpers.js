@@ -14,7 +14,7 @@ export const fetchNowcast = async ({ lat, lon }) => {
     return data;
   } catch (error) {
     console.error("Could not fetch nowcast data:", error);
-    return { error: `Could not fetch nowcast data: ${error}` };
+    // return { error: `Could not fetch nowcast data: ${error}` };
   }
 };
 
