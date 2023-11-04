@@ -2,11 +2,7 @@ export const fetchNowcast = async ({ lat, lon }) => {
   const url = `https://api.met.no/weatherapi/nowcast/2.0/complete?lat=${lat}&lon=${lon}`;
 
   try {
-    const response = await fetch(url, {
-      headers: {
-        "User-Agent": "Daily/0.1 github.com/RykkjeTech",
-      },
-    });
+    const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -14,7 +10,6 @@ export const fetchNowcast = async ({ lat, lon }) => {
     return data;
   } catch (error) {
     console.error("Could not fetch nowcast data:", error);
-    // return { error: `Could not fetch nowcast data: ${error}` };
   }
 };
 
