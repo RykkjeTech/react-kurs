@@ -39,16 +39,22 @@ const WeatherWidget = () => {
   const windSpeed = currentDetails?.wind_speed;
   const windSpeedOfGust = currentDetails?.wind_speed_of_gust;
 
+  if (weather?.error) {
+    return (
+      <Card>
+        <CardContent>
+          <Typography color="error">
+            {JSON.stringify(weather?.error || {})}
+          </Typography>
+        </CardContent>
+      </Card>
+    );
+  }
+
   return (
     <Card>
       <CardContent>
         <Stack direction="column" spacing={1}>
-          {/* log error */}
-          {weather?.error && (
-            <Typography color="error">
-              {JSON.stringify(weather?.error || {})}
-            </Typography>
-          )}
           <Typography color="textSecondary" gutterBottom>
             Værvarsel for
           </Typography>
