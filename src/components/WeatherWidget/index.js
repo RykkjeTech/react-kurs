@@ -43,6 +43,12 @@ const WeatherWidget = () => {
     <Card>
       <CardContent>
         <Stack direction="column" spacing={1}>
+          {/* log error */}
+          {weather?.error && (
+            <Typography color="error">
+              {JSON.stringify(weather?.error || {})}
+            </Typography>
+          )}
           <Typography color="textSecondary" gutterBottom>
             Værvarsel for
           </Typography>
