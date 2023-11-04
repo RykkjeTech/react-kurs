@@ -4,7 +4,7 @@ export const fetchNowcast = async ({ lat, lon }) => {
   try {
     const response = await fetch(url, {
       headers: {
-        "User-Agent": "Daily/1.0 kriryk@gmail.com",
+        "User-Agent": "Daily/0.1 github.com/RykkjeTech",
       },
     });
     if (!response.ok) {
