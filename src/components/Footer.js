@@ -14,7 +14,7 @@ export default function Footer() {
         Vercel
       </Link>
       <Link
-        href="https://github.com/dittBrukernavn/dittRepo"
+        href="https://github.com/RykkjeTech/react-kurs"
         target="_blank"
         rel="noopener"
         mr={2}
