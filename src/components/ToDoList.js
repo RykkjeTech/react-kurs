@@ -8,7 +8,7 @@ import {
   Stack,
 } from "@mui/material";
 
-const ToDoList = () => {
+export const ToDoList = () => {
   const [todos, setTodos] = useState([]); // Holder styr på todos som en array
   const [input, setInput] = useState(""); // Holder styr på brukerens input
 
